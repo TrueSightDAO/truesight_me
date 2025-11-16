@@ -71,13 +71,45 @@
         <div class="section-content">
           <div class="values-grid">
             <div class="value-item">
+              <div class="value-icon">
+                <svg width="56" height="56" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Mindfulness: Concentric circles with inner dot (awareness/presence) -->
+                  <circle cx="100" cy="100" r="70" stroke="currentColor" stroke-width="4" opacity="0.3"/>
+                  <circle cx="100" cy="100" r="50" stroke="currentColor" stroke-width="4" opacity="0.5"/>
+                  <circle cx="100" cy="100" r="30" stroke="currentColor" stroke-width="4"/>
+                  <circle cx="100" cy="100" r="8" fill="currentColor"/>
+                </svg>
+              </div>
               <h2 class="value-title">mindfulness</h2>
+              <p>We practice awareness and presence in everything we do, staying attuned to the deeper patterns and realities that shape our impact on the world.</p>
             </div>
             <div class="value-item">
+              <div class="value-icon">
+                <svg width="56" height="56" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Compassion: Heart symbol (care, empathy) -->
+                  <path d="M100 160 C60 130, 40 100, 40 75 C40 55, 55 40, 75 40 C85 40, 95 45, 100 52 C105 45, 115 40, 125 40 C145 40, 160 55, 160 75 C160 100, 140 130, 100 160 Z" stroke="currentColor" stroke-width="4" fill="none"/>
+                  <path d="M100 52 C100 45, 95 40, 90 40 C85 40, 80 42, 80 48 C80 52, 82 55, 85 58" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+                </svg>
+              </div>
               <h2 class="value-title">compassion</h2>
+              <p>We lead with empathy and care, ensuring that every decision and action uplifts lives, nurtures communities, and addresses real suffering with thoughtful solutions.</p>
             </div>
             <div class="value-item">
+              <div class="value-icon">
+                <svg width="56" height="56" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Equanimity: Balance scales (balance, steadiness) -->
+                  <line x1="60" y1="80" x2="140" y2="80" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="100" y1="40" x2="100" y2="140" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  <circle cx="70" cy="80" r="18" stroke="currentColor" stroke-width="4" fill="none"/>
+                  <circle cx="130" cy="80" r="18" stroke="currentColor" stroke-width="4" fill="none"/>
+                  <circle cx="70" cy="80" r="6" fill="currentColor" opacity="0.5"/>
+                  <circle cx="130" cy="80" r="6" fill="currentColor" opacity="0.5"/>
+                  <line x1="70" y1="98" x2="70" y2="120" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+                  <line x1="130" y1="98" x2="130" y2="120" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+                </svg>
+              </div>
               <h2 class="value-title">equanimity</h2>
+              <p>We maintain balance and steadiness in our approach, navigating challenges with clarity and resilience while staying true to our mission of transformative change.</p>
             </div>
           </div>
           <div class="cta-row" style="justify-content: center; margin-top: 2rem;">
@@ -156,16 +188,8 @@
         <p class="section-lead">
           Track our progress as we build towards a more compassionate and equitable world.
         </p>
-        <div class="milestones-container">
-          <iframe
-            class="timeline-embed"
-            title="TrueSight DAO Timeline"
-            src="https://app.lumifish.com/timeline/trueSight-dao"
-            scrolling="no"
-            allowfullscreen
-            allowtransparency="true"
-            frameborder="0"
-          ></iframe>
+        <div class="timeline-container" id="timeline-container">
+          <!-- Timeline events will be populated dynamically from data/timeline-events.js -->
         </div>
       </section>
 
@@ -193,6 +217,67 @@
         </div>
       </footer>
     </div>
+    <script>
+      // Inline data to avoid CORS issues with file:// protocol
+      // Auto-generated from data/timeline-events.js
+      const timelineEvents = [
+        {"date":"2024-07-08","title":"Governance Token Goes Live","description":"Now trading on LATOKEN!","image":"assets/la_token.png","order":1},
+        {"date":"2024-06-26","title":"Partnership with CEPOTX","description":"Joining forces with CEPOTX, a Brazilian organic cacao cooperative based in Para, to promote sustainable cacao sourcing.","image":"assets/ceptox.png","order":2},
+        {"date":"2024-05-15","title":"First Live Sale","description":"Okanogan Family Barter Faire","image":"assets/okanogan.jpg","order":3},
+        {"date":"2023-11-17","title":"Launching US Sales","description":"Inaugural sale to US chocolatier manufacturer marks entry into American market.","image":"assets/launch_us_sale.png","order":4},
+        {"date":"2023-09-30","title":"First Commercial Cacao Nibs Import","description":"Establishing a formal commercial import channel for high-quality cacao nibs.","image":"assets/first_commercial_nibs_importing.png","order":5},
+        {"date":"2023-05-09","title":"Coopercabruca Alliance","description":"Joining forces with Brazilian farmers to drive positive change.","image":"assets/coopercabruca_partnership.webp","order":6},
+        {"date":"2023-04-27","title":"Agroverse Guild Inception","description":"Restoring Amazon rainforest and empowering farmers through direct trade.","image":"assets/agroverse_logo.jpeg","order":7},
+        {"date":"2022-07-05","title":"Davos Partnership","description":"TrueSight DAO joins forces with House of Balance at WEF","order":8},
+        {"date":"2022-01-27","title":"TDG Token Launch","description":"TDG tokens go live on Solana.","image":"assets/tdg_token_launch.png","order":9},
+        {"date":"2021-08-21","title":"First Paying Subscriber to Edgar","description":"Personalized alerts for market sell-offs and news spikes","image":"assets/first_paying_subscriber.jpg","order":10},
+        {"date":"2018-09-01","title":"Creation of Edgar","description":"Tracking headlines and markets to uncover distorted views.","image":"assets/edgar_creation.jpg","order":11},
+        {"date":"2017-12-31","title":"Inception of DAO","description":"Realization that perception is a distorted view of reality.","image":"assets/inception_of_dao.jpg","order":12}
+      ];
+
+      // Render timeline
+      (function() {
+        const timelineContainer = document.getElementById('timeline-container');
+        if (!timelineContainer || !timelineEvents || timelineEvents.length === 0) {
+          return;
+        }
+
+        // Sort by order (most recent first)
+        const sortedEvents = [...timelineEvents].sort((a, b) => (a.order || 999) - (b.order || 999));
+
+        // Format date from YYYY-MM-DD to readable format
+        function formatDate(dateStr) {
+          const date = new Date(dateStr);
+          const year = date.getFullYear();
+          const month = date.toLocaleDateString('en-US', { month: 'short' });
+          const day = date.getDate();
+          return `${month} ${day}, ${year}`;
+        }
+
+        timelineContainer.innerHTML = sortedEvents.map(event => {
+          const title = String(event.title || 'Event').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          const description = String(event.description || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          const date = event.date ? formatDate(event.date) : '';
+          const dateYear = event.date ? new Date(event.date).getFullYear() : '';
+          const image = event.image ? String(event.image).replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
+          const imageHtml = image ? `<div class="timeline-image"><img src="${image}" alt="${title}" loading="lazy" /></div>` : '';
+          
+          return `
+            <article class="timeline-event">
+              <div class="timeline-date">
+                <span class="timeline-year">${dateYear}</span>
+                <span class="timeline-full-date">${date}</span>
+              </div>
+              <div class="timeline-content">
+                ${imageHtml}
+                <h3>${title}</h3>
+                <p>${description}</p>
+              </div>
+            </article>
+          `;
+        }).join('');
+      })();
+    </script>
     <script>
       // Hamburger menu toggle
       (function() {
