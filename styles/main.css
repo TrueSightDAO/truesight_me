@@ -543,12 +543,12 @@ a {
 
   .footer-social img,
   .footer-social svg {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
   }
 
   .footer-social svg {
-    padding: 0.75rem;
+    padding: 0.4rem;
   }
 
   /* About page mobile */
@@ -722,12 +722,12 @@ a {
 
   .footer-social img,
   .footer-social svg {
-    width: 60px;
-    height: 60px;
+    width: 36px;
+    height: 36px;
   }
 
   .footer-social svg {
-    padding: 0.5rem;
+    padding: 0.35rem;
   }
 
   .value-title {
@@ -1394,21 +1394,21 @@ ul li + li {
 }
 
 .footer-social img {
-  width: 121px;
-  height: 121px;
+  width: 48px;
+  height: 48px;
   border-radius: 8px;
   display: block;
   object-fit: cover;
 }
 
 .footer-social svg {
-  width: 121px;
-  height: 121px;
+  width: 48px;
+  height: 48px;
   border-radius: 8px;
   display: block;
   color: var(--forest);
   background: rgba(255, 255, 255, 0.9);
-  padding: 1rem;
+  padding: 0.5rem;
   transition: background 200ms ease, transform 200ms ease;
 }
 
