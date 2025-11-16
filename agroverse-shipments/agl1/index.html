@@ -81,6 +81,17 @@
         <p class="section-lead">
           View transparent details for this Agroverse shipment, managed by TrueSight DAO.
         </p>
+        
+        <div style="margin-top: var(--space-lg); padding: var(--space-lg); background: rgba(244, 163, 0, 0.1); border: 2px solid rgba(244, 163, 0, 0.3); border-radius: 16px; display: inline-block;">
+          <div style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-weight: 600; margin-bottom: var(--space-xs);">Trees to be Planted</div>
+          <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-2); line-height: 1.2;">
+            <span data-trees-sold data-shipment-id="agl1" style="display: inline-block;">
+              0
+            </span>
+            <span class="trees-sold-loading" style="display: none; margin-left: 0.5rem; font-size: 1rem; color: var(--muted); font-weight: 400;">(updating...)</span>
+          </div>
+        </div>
+        
       </header>
 
       <section>
@@ -115,6 +126,17 @@
               <div class="shipment-detail-row" style="display: grid; grid-template-columns: 200px 1fr; gap: var(--space-sm); padding: var(--space-xs) 0; border-bottom: 1px solid rgba(95, 111, 82, 0.1);">
                 <dt style="font-weight: 600; color: var(--text);">Cacao in kg.</dt>
                 <dd style="margin: 0; color: var(--muted);">6.5</dd>
+              </div>
+              
+              
+              <div class="shipment-detail-row" style="display: grid; grid-template-columns: 200px 1fr; gap: var(--space-sm); padding: var(--space-xs) 0; border-bottom: 1px solid rgba(95, 111, 82, 0.1);">
+                <dt style="font-weight: 600; color: var(--text);">Trees to be Planted</dt>
+                <dd style="margin: 0; color: var(--muted);">
+                  <span data-trees-sold data-shipment-id="agl1" style="display: inline-block;">
+                    0
+                  </span>
+                  <span class="trees-sold-loading" style="display: none; margin-left: 0.5rem; font-size: 0.875rem; color: var(--muted);">(updating...)</span>
+                </dd>
               </div>
               
               
@@ -164,9 +186,48 @@
         </div>
       </section>
     </div>
-    <footer style="margin: var(--space-xl) auto var(--space-lg); text-align: center;">
-      TrueSight DAO · Transparent impact data available at <a href="/">truesight.me</a>
+    
+    <footer class="footer">
+      <div class="footer-content">
+        <div style="margin-bottom: var(--space-lg);">
+          <div style="margin-bottom: var(--space-md);">
+            <h4 style="font-size: 0.875rem; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text); text-align: center; text-transform: uppercase; letter-spacing: 0.05em;">Transparency</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-sm) var(--space-lg);">
+              <li><a href="https://truesight.me/physical-asset-locations" target="_blank" rel="noreferrer noopener" style="color: var(--muted); text-decoration: none; font-size: 0.9375rem;">Track Shipment Locations</a></li>
+              <li><a href="https://truesight.me/physical-asset-movements" target="_blank" rel="noreferrer noopener" style="color: var(--muted); text-decoration: none; font-size: 0.9375rem;">Shipment History</a></li>
+              <li><a href="https://truesight.me/physical-transactions" target="_blank" rel="noreferrer noopener" style="color: var(--muted); text-decoration: none; font-size: 0.9375rem;">Financial Records</a></li>
+              <li><a href="https://agroverse.shop/consignments" target="_blank" rel="noreferrer noopener" style="color: var(--muted); text-decoration: none; font-size: 0.9375rem;">Consignment Tracking</a></li>
+              <li><a href="https://truesight.me/physical-assets/serialized" target="_blank" rel="noreferrer noopener" style="color: var(--muted); text-decoration: none; font-size: 0.9375rem;">Product Verification</a></li>
+              <li><a href="https://truesight.me/digital-assets" target="_blank" rel="noreferrer noopener" style="color: var(--muted); text-decoration: none; font-size: 0.9375rem;">Token Holdings</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-size: 0.875rem; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text); text-align: center; text-transform: uppercase; letter-spacing: 0.05em;">Partnerships</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-sm) var(--space-lg);">
+              <li><a href="https://agroverse.shop/community-warehouse-manager/sla" target="_blank" rel="noreferrer noopener" style="color: var(--muted); text-decoration: none; font-size: 0.9375rem;">Warehouse Partnership Terms</a></li>
+              <li><a href="https://agroverse.shop/community-distributor/agreement" target="_blank" rel="noreferrer noopener" style="color: var(--muted); text-decoration: none; font-size: 0.9375rem;">Distribution Partnership Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <h2>JOIN OUR MOVEMENT</h2>
+        <p>Co-Create with us</p>
+        <div class="footer-social">
+          <a href="https://t.me/TrueSightDAO" target="_blank" rel="noreferrer noopener" aria-label="Telegram">
+            <img src="../../assets/telegram-icon.jpg" alt="Telegram" width="48" height="48" loading="lazy" />
+          </a>
+          <a href="https://github.com/TrueSightDAO" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor">
+              <title>GitHub</title>
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+        <p style="margin-top: var(--space-lg); font-size: 0.875rem; color: var(--muted);">
+          TrueSight DAO · Transparent impact data available at <a href="../../index.html" style="color: var(--accent-2);">truesight.me</a>
+        </p>
+      </div>
     </footer>
+  
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
       // Initialize Leaflet map if coordinates are available
@@ -202,6 +263,48 @@
             siteHeader.classList.remove('menu-open');
           }
         });
+      })();
+      
+      // Load trees sold count dynamically
+      (function() {
+        const treesSoldElement = document.querySelector('[data-trees-sold]');
+        if (!treesSoldElement) return;
+        
+        const shipmentId = treesSoldElement.getAttribute('data-shipment-id');
+        if (!shipmentId) return;
+        
+        const loadingElement = document.querySelector('.trees-sold-loading');
+        if (loadingElement) {
+          loadingElement.style.display = 'inline';
+        }
+        
+        const serviceUrl = 'https://script.google.com/macros/s/AKfycbzlfOBo9UqKOh7jIqGcmbPAMM1RxCbsJHb-UV_vM6VbvK_HSdT44KyGbbXIeo-_Ovfy/exec';
+        fetch(serviceUrl + '?shipmentId=' + encodeURIComponent(shipmentId))
+          .then(function(response) {
+            if (!response.ok) {
+              throw new Error('HTTP error! status: ' + response.status);
+            }
+            return response.json();
+          })
+          .then(function(data) {
+            if (data.error) {
+              console.warn('Error fetching trees sold:', data.message);
+              return;
+            }
+            
+            if (data.treesSold !== undefined && data.treesSold !== null) {
+              treesSoldElement.textContent = data.treesSold;
+              treesSoldElement.classList.add('loaded');
+            }
+          })
+          .catch(function(error) {
+            console.warn('Error fetching trees sold count:', error);
+          })
+          .finally(function() {
+            if (loadingElement) {
+              loadingElement.style.display = 'none';
+            }
+          });
       })();
     </script>
   </body>
