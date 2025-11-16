@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-16T01:34:29.984Z",
+  "timestamp": "2025-11-16T02:42:44.592Z",
   "collections": {
     "agroverseShipments": [
       {
@@ -145,7 +145,7 @@
         "exchangeRate": 2256243.5537057184,
         "currency": "TDG",
         "updatedDate": {
-          "$date": "2025-11-16T00:36:52.900Z"
+          "$date": "2025-11-16T02:36:53.780Z"
         }
       },
       "ASSET_PER_TDG_ISSUED": {
@@ -163,16 +163,16 @@
         "exchangeRate": 241.97,
         "currency": "USD",
         "updatedDate": {
-          "$date": "2025-11-16T01:18:56.155Z"
+          "$date": "2025-11-16T02:18:56.595Z"
         }
       },
       "TDG_USDC_PRICE": {
         "id": "8edde502-ac79-4e66-ab2d-8ebb99108665",
         "description": "USDC_EXCHANGE_RATE_RAYDIUM",
-        "exchangeRate": 0.033348,
+        "exchangeRate": 0.03297,
         "currency": "USDC",
         "updatedDate": {
-          "$date": "2025-11-15T23:17:26.430Z"
+          "$date": "2025-11-16T01:43:23.771Z"
         }
       }
     },

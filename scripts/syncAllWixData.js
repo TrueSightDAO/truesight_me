@@ -39,6 +39,7 @@ const HEADERS = {
   "wix-account-id": ACCOUNT_ID,
 };
 const OUTPUT_DIR = path.join(__dirname, "..", "data");
+const INDEX_HTML_PATH = path.join(__dirname, "..", "index.html");
 
 // ExchangeRate item IDs from SCHEMA.md
 const EXCHANGE_RATE_ITEMS = {
@@ -174,13 +175,54 @@ async function syncExchangeRates() {
     }
   }
 
+  // Write as JavaScript module (for current usage)
   await writeJSModule(
     "exchange-rates.js",
     rates,
     "TrueSight DAO financial metrics and exchange rates"
   );
-  console.log(`   ✅ Wrote ${Object.keys(rates).length} exchange rate items`);
+  
+  // Write as JSON (for migration and future use)
+  await writeJSON(
+    "exchange-rates.json",
+    {
+      timestamp: new Date().toISOString(),
+      description: "TrueSight DAO financial metrics and exchange rates from Wix CMS ExchangeRate collection",
+      data: rates,
+    }
+  );
+  
+  // Update inlined data in index.html
+  await updateIndexHtmlWithExchangeRates(rates);
+  
+  console.log(`   ✅ Wrote ${Object.keys(rates).length} exchange rate items (JS + JSON + index.html)`);
   return rates;
+}
+
+/**
+ * Update the inlined exchange rates data in index.html
+ */
+async function updateIndexHtmlWithExchangeRates(rates) {
+  try {
+    let htmlContent = await fs.promises.readFile(INDEX_HTML_PATH, "utf8");
+    
+    // Create a compact JSON string for inlining (minified)
+    const compactJson = JSON.stringify(rates).replace(/\s+/g, " ");
+    
+    // Find and replace the exchangeRatesData constant
+    const regex = /const exchangeRatesData = \{[\s\S]*?\};/;
+    const replacement = `const exchangeRatesData = ${compactJson};`;
+    
+    if (regex.test(htmlContent)) {
+      htmlContent = htmlContent.replace(regex, replacement);
+      await fs.promises.writeFile(INDEX_HTML_PATH, htmlContent, "utf8");
+      console.log(`   ✅ Updated inlined exchange rates in index.html`);
+    } else {
+      console.warn(`   ⚠️  Could not find exchangeRatesData in index.html to update`);
+    }
+  } catch (err) {
+    console.warn(`   ⚠️  Failed to update index.html: ${err.message}`);
+  }
 }
 
 /**

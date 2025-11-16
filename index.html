@@ -68,26 +68,27 @@
           </a>
         </div>
 
-        <div class="stats-grid" aria-label="Ecosystem statistics">
+        <div class="stats-grid" aria-label="Ecosystem statistics" id="stats-grid">
+          <!-- Stats will be populated dynamically from exchange-rates.json -->
           <article class="stat-card">
             <h3>USD Treasury Balance</h3>
-            <p>15,929.34 USD</p>
+            <p class="stat-value" data-key="USD_TREASURY_BALANCE">—</p>
           </article>
           <article class="stat-card">
             <h3>Asset per TDG Issued</h3>
-            <p>0.00706 USD / TDG</p>
+            <p class="stat-value" data-key="ASSET_PER_TDG_ISSUED">—</p>
           </article>
           <article class="stat-card">
             <h3>Total TDG Issued</h3>
-            <p>2,256,243.55 TDG</p>
+            <p class="stat-value" data-key="TDG_ISSUED">—</p>
           </article>
           <article class="stat-card">
             <h3>Past 30 Days Sales</h3>
-            <p>241.97 USD</p>
+            <p class="stat-value" data-key="30_DAYS_SALES">—</p>
           </article>
           <article class="stat-card">
             <h3>Daily Buy-Back Budget</h3>
-            <p>0.05694 USD</p>
+            <p class="stat-value" data-key="DAILY_BUY_BACK_BUDGET">—</p>
           </article>
         </div>
       </header>
@@ -205,6 +206,57 @@
     <footer>
       TrueSight DAO · Transparent impact data available at <a href="https://truesight.me">truesight.me</a>
     </footer>
+    <script>
+      // Inline exchange rates data to avoid CORS issues with file:// protocol
+      // Auto-generated from data/exchange-rates.json
+      const exchangeRatesData = {"USD_TREASURY_BALANCE":{"id":"a0e7364c-716d-49f3-a795-647d2686a22b","description":"USD_TREASURY_BALANCE","exchangeRate":15929.342910917547,"currency":"USD","updatedDate":{"$date":"2025-11-01T02:58:51.932Z"}},"TDG_ISSUED":{"id":"4088e994-2c06-42a8-a1cf-8cd77ee73203","description":"TDG_ISSUED","exchangeRate":2256243.5537057184,"currency":"TDG","updatedDate":{"$date":"2025-11-16T02:36:53.780Z"}},"ASSET_PER_TDG_ISSUED":{"id":"9b04879b-f06a-419a-9ad3-520ad60ea972","description":"ASSET_PER_TDG_ISSUED","exchangeRate":0.007060116752358026,"currency":"USD","updatedDate":{"$date":"2025-11-01T03:22:03.979Z"}},"30_DAYS_SALES":{"id":"956fdb46-bc8d-4c71-8e67-79813effbab3","description":"PAST_30_DAYS_SALES","exchangeRate":241.97,"currency":"USD","updatedDate":{"$date":"2025-11-16T02:18:56.595Z"}},"TDG_USDC_PRICE":{"id":"8edde502-ac79-4e66-ab2d-8ebb99108665","description":"USDC_EXCHANGE_RATE_RAYDIUM","exchangeRate":0.03297,"currency":"USDC","updatedDate":{"$date":"2025-11-16T01:43:23.771Z"}}};
+
+      // Format and display stats
+      (function() {
+        function formatNumber(num, decimals) {
+          if (num === null || num === undefined) return '—';
+          return num.toLocaleString('en-US', {
+            minimumFractionDigits: decimals || 0,
+            maximumFractionDigits: decimals !== undefined ? decimals : (num < 1 ? 5 : 2)
+          });
+        }
+
+        function formatStatValue(key, data) {
+          if (!data || data.exchangeRate === null || data.exchangeRate === undefined) {
+            return '—';
+          }
+
+          const value = data.exchangeRate;
+          const currency = data.currency || '';
+
+          switch (key) {
+            case 'USD_TREASURY_BALANCE':
+              return `${formatNumber(value, 2)} USD`;
+            case 'ASSET_PER_TDG_ISSUED':
+              return `${formatNumber(value, 5)} USD / TDG`;
+            case 'TDG_ISSUED':
+              return `${formatNumber(value, 2)} TDG`;
+            case '30_DAYS_SALES':
+              return `${formatNumber(value, 2)} USD`;
+            case 'DAILY_BUY_BACK_BUDGET':
+              // Calculate daily buy-back budget from 30 days sales
+              const sales30Days = exchangeRatesData['30_DAYS_SALES']?.exchangeRate || 0;
+              const dailyBudget = sales30Days / 30;
+              return `${formatNumber(dailyBudget, 5)} USD`;
+            default:
+              return `${formatNumber(value, 2)} ${currency}`;
+          }
+        }
+
+        // Populate stats from JSON data
+        const statElements = document.querySelectorAll('.stat-value[data-key]');
+        statElements.forEach(function(el) {
+          const key = el.getAttribute('data-key');
+          const data = exchangeRatesData[key];
+          el.textContent = formatStatValue(key, data);
+        });
+      })();
+    </script>
     <script>
       // Hamburger menu toggle
       (function() {
