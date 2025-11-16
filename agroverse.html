@@ -299,6 +299,9 @@
             </tbody>
           </table>
         </div>
+        <div class="shipments-cards" id="shipments-cards">
+          <!-- Mobile-friendly cards populated from the same data -->
+        </div>
         <p class="table-footnote">Data reflects the running log published at truesight.me/agroverse.</p>
       </section>
 
@@ -339,20 +342,69 @@
       ];
 
       // Legacy metadata for shipments (volume, financing, notes)
-      // This can be moved to CMS later if needed
+      // Synced with assets/raw/shipments_collection.csv (cargo_size, transaction_type, shipment_description).
+      // This can be moved to CMS later if needed.
       const shipmentMetadata = {
-        'AGL14': { volume: '40 kg', financing: 'DAO financed', notes: 'Amazon warehouse to US chocolatier' },
-        'AGL13': { volume: '150 kg', financing: 'DeFi pre-purchase', notes: 'Farmer collective in Pará scaling second harvest' },
-        'AGL10': { volume: '5 kg', financing: 'DAO financed', notes: 'Pilot lot for boutique European buyer' },
-        'AGL8': { volume: '330 kg', financing: 'DeFi pre-purchase', notes: 'Bulk shipment consolidated for US manufacturers' },
-        'AGL7': { volume: '25 kg', financing: 'DAO financed', notes: 'Community cacao circle + sampling program' },
-        'AGL6': { volume: '28 kg', financing: 'DeFi pre-purchase', notes: 'Inventory earmarked for Agroshop launch' },
-        'AGL5': { volume: '37.5 kg', financing: 'DeFi pre-purchase', notes: 'Supports regenerative farmers expanding agroforestry plots' },
-        'AGL4': { volume: '400 kg', financing: 'DAO financed', notes: 'Bridge shipment proving community warehouse capacity' },
-        'AGL3': { volume: '525 kg', financing: 'DeFi pre-purchase', notes: 'Largest transparent cacao batch to date' },
-        'AGL2': { volume: '128 kg', financing: 'DeFi pre-purchase', notes: 'Linked to TDG scoring pilots for sourcing teams' },
-        'AGL1': { volume: '6.5 kg', financing: 'DeFi pre-purchase', notes: 'Early proof-of-concept for direct-to-buyer fulfillment' },
-        'AGL0': { volume: '6.5 kg', financing: 'DeFi pre-purchase', notes: 'Foundational shipment validating tokenized tracking' },
+        'AGL14': {
+          volume: '40 KG',
+          financing: 'DAO financed',
+          notes: 'From the sun-kissed groves of Oscar Fazenda in Bahia, Brazil, this 40KG Harvest 2025 batch comes from ancient native trees and delivers a velvety, rich dark chocolate profile.'
+        },
+        'AGL13': {
+          volume: '150 KG',
+          financing: 'Defi Pre-Purchase',
+          notes: 'Regenerative agroforestry cacao from Vivi’s Farm near Jeribucuacu, Bahia—fish-based fertilizer and transparent pricing through Agroverse’s equitable network.'
+        },
+        'AGL10': {
+          volume: '5 KG',
+          financing: 'DAO financed',
+          notes: '5KG caramelized cacao beans from Capela Velha Fazenda, a women-owned regenerative organic cacao farm in Bahia, Brazil.'
+        },
+        'AGL8': {
+          volume: '330 KG',
+          financing: 'Defi Pre-Purchase',
+          notes: '330KG of cacao almonds from small-scale farmers in Pará, Brazil, manufactured under the CEPOTX cooperative.'
+        },
+        'AGL7': {
+          volume: '25 KG',
+          financing: 'DAO financed',
+          notes: '20 bottles of 250g cacao molasses from Bahia small-scale farmers, backed by FDA prior notice for US import.'
+        },
+        'AGL6': {
+          volume: '22 KG',
+          financing: 'Defi Pre-Purchase',
+          notes: 'São Jorge Farm shipment: cacao mass bars and nibs from cabruca agroforestry in Itabuna, Bahia, with rich nutty, fruity, and floral flavor complexity.'
+        },
+        'AGL5': {
+          volume: '9.5KG',
+          financing: 'Defi Pre-Purchase',
+          notes: '30 × 250g bottles of cacao molasses from Bahia small-scale farmers, commercial import via air freight.'
+        },
+        'AGL4': {
+          volume: '300 KG',
+          financing: 'DAO financed',
+          notes: '300KG organic cacao nibs from Bahia small-scale farmers, air-freighted as an early organic bridge shipment.'
+        },
+        'AGL3': {
+          volume: '525 KG',
+          financing: 'Defi Pre-Purchase',
+          notes: 'Multi-product USDA/NOP organic shipment including cacao almonds, liquor bars, nibs, kraft pouches, and cacao molasses from Coopercabruca.'
+        },
+        'AGL2': {
+          volume: '100 KG',
+          financing: 'Defi Pre-Purchase',
+          notes: '100KG organic cacao nibs from Coopercabruca, commercial import via air freight with full FDA and invoice documentation.'
+        },
+        'AGL1': {
+          volume: '5 KG',
+          financing: 'Defi Pre-Purchase',
+          notes: '5KG cacao nibs commercial import, hand-carried across the border with prior notice, invoice, and purchase order logged.'
+        },
+        'AGL0': {
+          volume: '5 KG',
+          financing: 'Defi Pre-Purchase',
+          notes: 'Foundational 5KG cacao nib samples from Coopercabruca, carried via hand luggage as an early proof-of-concept for Agroverse.'
+        },
       };
 
       (function() {
@@ -369,20 +421,51 @@
           });
 
         tbody.innerHTML = aglShipments.map(shipment => {
+          const meta = shipmentMetadata[shipment.title] || { volume: '—', financing: '—', notes: '—' };
+          const batchLink = shipment.contractUrl 
+            ? `<a class="text-link" href="${shipment.contractUrl}" target="_blank" rel="noreferrer">${shipment.title}</a>`
+            : shipment.title;
+          
+          return `
+            <tr>
+              <td>${batchLink}</td>
+              <td>${meta.volume}</td>
+              <td>${meta.financing}</td>
+              <td>${meta.notes}</td>
+            </tr>
+          `;
+        }).join('');
+
+        // Also render a mobile-friendly card list using the same data
+        const cardsContainer = document.getElementById('shipments-cards');
+        if (cardsContainer) {
+          cardsContainer.innerHTML = aglShipments.map(shipment => {
             const meta = shipmentMetadata[shipment.title] || { volume: '—', financing: '—', notes: '—' };
             const batchLink = shipment.contractUrl 
-              ? `<a href="${shipment.contractUrl}" target="_blank" rel="noreferrer">${shipment.title}</a>`
+              ? `<a class="text-link" href="${shipment.contractUrl}" target="_blank" rel="noreferrer">${shipment.title}</a>`
               : shipment.title;
-            
+
             return `
-              <tr>
-                <td>${batchLink}</td>
-                <td>${meta.volume}</td>
-                <td>${meta.financing}</td>
-                <td>${meta.notes}</td>
-              </tr>
+              <article class="shipment-card">
+                <h3 class="shipment-card-title">${batchLink}</h3>
+                <dl class="shipment-card-meta">
+                  <div>
+                    <dt>Volume</dt>
+                    <dd>${meta.volume}</dd>
+                  </div>
+                  <div>
+                    <dt>Financing</dt>
+                    <dd>${meta.financing}</dd>
+                  </div>
+                  <div>
+                    <dt>Notes</dt>
+                    <dd>${meta.notes}</dd>
+                  </div>
+                </dl>
+              </article>
             `;
           }).join('');
+        }
       })();
     </script>
     <script>
