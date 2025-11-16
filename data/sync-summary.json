@@ -1,0 +1,303 @@
+{
+  "timestamp": "2025-11-16T01:34:29.984Z",
+  "collections": {
+    "agroverseShipments": [
+      {
+        "id": "9f2ddf0c-ad86-4825-8d6a-f3398dfa5aba",
+        "title": "AGL14",
+        "contractUrl": "https://agroverse.shop/agl14",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "1fb58821-65dd-4001-937f-c60b1e977192",
+        "title": "AGL13",
+        "contractUrl": "https://agroverse.shop/agl13",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "1f9e4dd2-f5ea-4f53-a920-7f0ac7ac8cd4",
+        "title": "SEF1",
+        "contractUrl": "https://truesight.me/sunmint/sef1",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "2849473b-d97e-4b54-80ec-0a2de5c863c5",
+        "title": "PP1",
+        "contractUrl": "https://truesight.me/sunmint/pp1",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "96225451-b141-4013-9b70-190b5f228612",
+        "title": "AGL10",
+        "contractUrl": "https://agroverse.shop/agl10",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "83fc9bea-09a7-4669-8871-70d434c8e90f",
+        "title": "AGL8",
+        "contractUrl": "https://agroverse.shop/agl8",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "bec3fc08-2840-4197-8a9d-fe286284a392",
+        "title": "AGL7",
+        "contractUrl": "https://agroverse.shop/agl7",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "1176be3a-50e0-48f7-aee3-74d456be7efc",
+        "title": "AGL6",
+        "contractUrl": "https://agroverse.shop/agl6",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "59302bdd-644b-498d-96ef-9b7d7acc7bac",
+        "title": "AGL5",
+        "contractUrl": "https://agroverse.shop/agl5",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "805c4f45-dc36-4e9e-ae99-ff78fd2d151d",
+        "title": "AGL4",
+        "contractUrl": "https://agroverse.shop/agl4",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "946baf2e-268d-4e65-850d-c467a8eac75a",
+        "title": "AGL3",
+        "contractUrl": "https://agroverse.shop/agl3",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "a75a76b3-d6a9-4321-8337-2477ad4931d7",
+        "title": "AGL2",
+        "contractUrl": "https://agroverse.shop/agl2",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "8ca78804-32ab-474a-a526-8220967d8585",
+        "title": "AGL1",
+        "contractUrl": "https://agroverse.shop/agl1",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      },
+      {
+        "id": "546de275-dab8-4e08-9cca-7125e735cc03",
+        "title": "AGL0",
+        "contractUrl": "",
+        "status": null,
+        "tags": [],
+        "updatedDate": null,
+        "createdDate": null
+      }
+    ],
+    "exchangeRates": {
+      "USD_TREASURY_BALANCE": {
+        "id": "a0e7364c-716d-49f3-a795-647d2686a22b",
+        "description": "USD_TREASURY_BALANCE",
+        "exchangeRate": 15929.342910917547,
+        "currency": "USD",
+        "updatedDate": {
+          "$date": "2025-11-01T02:58:51.932Z"
+        }
+      },
+      "TDG_ISSUED": {
+        "id": "4088e994-2c06-42a8-a1cf-8cd77ee73203",
+        "description": "TDG_ISSUED",
+        "exchangeRate": 2256243.5537057184,
+        "currency": "TDG",
+        "updatedDate": {
+          "$date": "2025-11-16T00:36:52.900Z"
+        }
+      },
+      "ASSET_PER_TDG_ISSUED": {
+        "id": "9b04879b-f06a-419a-9ad3-520ad60ea972",
+        "description": "ASSET_PER_TDG_ISSUED",
+        "exchangeRate": 0.007060116752358026,
+        "currency": "USD",
+        "updatedDate": {
+          "$date": "2025-11-01T03:22:03.979Z"
+        }
+      },
+      "30_DAYS_SALES": {
+        "id": "956fdb46-bc8d-4c71-8e67-79813effbab3",
+        "description": "PAST_30_DAYS_SALES",
+        "exchangeRate": 241.97,
+        "currency": "USD",
+        "updatedDate": {
+          "$date": "2025-11-16T01:18:56.155Z"
+        }
+      },
+      "TDG_USDC_PRICE": {
+        "id": "8edde502-ac79-4e66-ab2d-8ebb99108665",
+        "description": "USDC_EXCHANGE_RATE_RAYDIUM",
+        "exchangeRate": 0.033348,
+        "currency": "USDC",
+        "updatedDate": {
+          "$date": "2025-11-15T23:17:26.430Z"
+        }
+      }
+    },
+    "statistics": [],
+    "edgarModules": [
+      {
+        "id": "2c0cfbf9-c5d3-4bfd-b610-65fcde52805b",
+        "title": "The Ledger",
+        "description": "Track member details and contributions in an easy-to-use Google Sheet.",
+        "demoUrl": "https://truesight.me/ledger",
+        "sourceUrl": "https://truesight.me/ledger",
+        "order": 1,
+        "tags": [],
+        "updatedDate": {
+          "$date": "2025-07-18T00:23:27.054Z"
+        },
+        "createdDate": {
+          "$date": "2025-07-18T00:02:11.466Z"
+        }
+      },
+      {
+        "id": "dc7f4a85-f7cd-412f-843d-d8a28577aacc",
+        "title": "Digital Signature",
+        "description": "Let members sign requests securely to prevent forgery.",
+        "demoUrl": "https://dapp.truesight.me/create_signature.html",
+        "sourceUrl": "https://github.com/TrueSightDAO/dapp/blob/main/create_signature.html?timestamp=1752797120426",
+        "order": 2,
+        "tags": [],
+        "updatedDate": {
+          "$date": "2025-07-24T22:10:07.522Z"
+        },
+        "createdDate": {
+          "$date": "2025-07-18T00:04:15.011Z"
+        }
+      },
+      {
+        "id": "f3a2996f-86a8-4590-a0cc-52f5abd09e8d",
+        "title": "Report Contributions",
+        "description": "Submit and track DAO contributions with file uploads or camera.",
+        "demoUrl": "https://dapp.truesight.me/report_contribution.html?timestamp=1753394266005",
+        "sourceUrl": "https://github.com/TrueSightDAO/dapp/blob/main/report_contribution.html",
+        "order": 3,
+        "tags": [],
+        "updatedDate": {
+          "$date": "2025-07-24T22:20:40.742Z"
+        },
+        "createdDate": {
+          "$date": "2025-07-24T21:58:01.341Z"
+        }
+      },
+      {
+        "id": "9d5ba3d2-76fc-4c02-88a4-9f8b34fe56bd",
+        "title": "Verify Member Requests",
+        "description": "Verify withdrawal requests and tree planting reports with digital signatures.",
+        "demoUrl": "https://dapp.truesight.me/verify_request.html?timestamp=1753394185517",
+        "sourceUrl": "https://github.com/TrueSightDAO/dapp/blob/main/verify_request.html",
+        "order": 5,
+        "tags": [],
+        "updatedDate": {
+          "$date": "2025-07-24T22:02:26.393Z"
+        },
+        "createdDate": {
+          "$date": "2025-07-24T21:55:48.094Z"
+        }
+      },
+      {
+        "id": "fda5eb83-85d2-4267-a954-b3ffe061437a",
+        "title": "Cash Out Voting Rights",
+        "description": "Allow members to convert earned voting rights into cash when needed.",
+        "demoUrl": "https://dapp.truesight.me/withdraw_voting_rights.html",
+        "sourceUrl": "https://github.com/TrueSightDAO/dapp/blob/main/withdraw_voting_rights.html?timestamp=1752797143053",
+        "order": 6,
+        "tags": [],
+        "updatedDate": {
+          "$date": "2025-07-24T22:00:54.718Z"
+        },
+        "createdDate": {
+          "$date": "2025-07-18T00:05:35.902Z"
+        }
+      },
+      {
+        "id": "8458f7f0-8357-4686-9128-044fc89c7b65",
+        "title": "Inventory Tracker",
+        "description": "Record and share inventory moves with photo proof. Works offline.",
+        "demoUrl": "https://dapp.truesight.me/report_inventory_movement.html",
+        "sourceUrl": "https://github.com/TrueSightDAO/dapp/blob/main/report_inventory_movement.html",
+        "order": 7,
+        "tags": [],
+        "updatedDate": {
+          "$date": "2025-07-24T22:00:56.172Z"
+        },
+        "createdDate": {
+          "$date": "2025-07-18T00:16:22.613Z"
+        }
+      },
+      {
+        "id": "214d602c-2141-4af8-bb31-b3450270b67c",
+        "title": "Expense Tracker",
+        "description": "Log DAO expenses with photos and location. Works offline and auto-generates reports.",
+        "demoUrl": "https://dapp.truesight.me/report_dao_expenses.html",
+        "sourceUrl": "https://github.com/TrueSightDAO/dapp/blob/main/report_dao_expenses.html",
+        "order": 8,
+        "tags": [],
+        "updatedDate": {
+          "$date": "2025-07-24T22:00:57.380Z"
+        },
+        "createdDate": {
+          "$date": "2025-07-18T00:18:14.955Z"
+        }
+      },
+      {
+        "id": "943d2f3e-b7a1-4a31-8817-1978dadcda2c",
+        "title": "Telegram Chat Logger",
+        "description": "Logs Telegram messages to Google Sheets, supports attachments, credits, and classification.",
+        "demoUrl": "https://t.me/TrueSightDAO/1",
+        "sourceUrl": "https://github.com/TrueSightDAO/tokenomics/blob/main/google_app_scripts/tdg_scoring/transfer_scored_contributions_to_main_ledger.gs",
+        "order": 11,
+        "tags": [],
+        "updatedDate": {
+          "$date": "2025-07-24T22:20:00.572Z"
+        },
+        "createdDate": {
+          "$date": "2025-07-18T00:26:08.677Z"
+        }
+      }
+    ]
+  }
+}

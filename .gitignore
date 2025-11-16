@@ -1,0 +1,10 @@
+# Local environment secrets
+.env
+
+# Node artifacts (future-proofing)
+node_modules/
+.npm/
+
+# macOS metadata
+.DS_Store
+

@@ -1,0 +1,15 @@
+{
+  "name": "truesight_me",
+  "version": "1.0.0",
+  "description": "This repository now ships a lightweight, hand-crafted landing page that mirrors the public content currently live on [truesight.me](https://truesight.me). The page focuses on the DAO's mission, transparent ecosystem statistics, community initiatives, and the community-governed workflow.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}

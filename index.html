@@ -22,16 +22,35 @@
     <link rel="stylesheet" href="styles/main.css" />
 </head>
   <body>
+    <nav class="site-header">
+      <div class="header-container">
+        <a href="index.html" class="header-logo">
+          <img
+            src="https://static.wixstatic.com/media/0e2cde_f81b16c82ebe4aaca4b5ce54b819a693~mv2.png/v1/fill/w_622,h_160,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/20240612_truesight_dao_logo_long.png"
+            alt="TrueSight DAO"
+            width="155"
+            height="40"
+            loading="eager"
+          />
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="agroverse.html">Agroverse</a></li>
+          <li><a href="sunmint.html">Sunmint</a></li>
+          <li><a href="edgar.html">Edgar</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="https://truesight.me/whitepaper" target="_blank" rel="noreferrer">Whitepaper</a></li>
+          <li><a href="https://dapp.truesight.me" target="_blank" rel="noreferrer">DApp</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="page">
       <header class="hero">
-        <img
-          class="hero-logo"
-          src="https://static.wixstatic.com/media/0e2cde_f81b16c82ebe4aaca4b5ce54b819a693~mv2.png/v1/fill/w_622,h_160,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/20240612_truesight_dao_logo_long.png"
-          alt="TrueSight DAO wordmark"
-          width="311"
-          height="80"
-          loading="lazy"
-        />
         <p class="pill">TrueSight DAO</p>
         <h1>Building a Better World <span>Based on Compassion</span></h1>
         <p>
@@ -122,6 +141,7 @@
               <li>Transparent supply chain evolution</li>
               <li>Community-driven profit sharing</li>
             </ul>
+            <a class="text-link" href="agroverse.html">Explore Agroverse</a>
           </article>
 
           <article class="card">
@@ -164,38 +184,18 @@
         </p>
         <div class="steps">
           <article class="step-card">
-            <img
-              src="https://static.wixstatic.com/media/nsplsh_8b79fec4220e418b9859dc47baf1a372~mv2.jpg/v1/crop/x_500,y_0,w_2000,h_2000/fill/w_400,h_400,al_c,q_80,enc_avif,quality_auto/Image%20by%20Chris%20Appano.jpg"
-              alt="Discover problems in the cacao supply chain"
-              loading="lazy"
-            />
             <h3>Discover Problems</h3>
             <p>Map the concrete bottlenecks facing our cacao stewards—fair pay, logistics, liquidity—and choose the one DAO members can unblock next.</p>
           </article>
           <article class="step-card">
-            <img
-              src="https://static.wixstatic.com/media/nsplsh_3443688bcf5f4178bc3b18f0a8f47010~mv2.jpg/v1/crop/x_0,y_900,w_1700,h_1700/fill/w_400,h_400,al_c,q_80,enc_avif,quality_auto/Image%20by%20Luke%20Chesser.jpg"
-              alt="Build solutions that solve the problem"
-              loading="lazy"
-            />
             <h3>Build to Solve</h3>
             <p>Prototype the lean fix—new TDG scoring scripts, agroverse runs, or warehouse playbooks—and ship it openly so members can contribute.</p>
           </article>
           <article class="step-card">
-            <img
-              src="https://static.wixstatic.com/media/nsplsh_ee3da09050dd46d7a7c4ccd4bccce098~mv2.jpg/v1/crop/x_750,y_0,w_3500,h_3500/fill/w_400,h_400,al_c,q_80,enc_avif,quality_auto/Image%20by%20Luke%20Chesser.jpg"
-              alt="Generate returns from the solution"
-              loading="lazy"
-            />
             <h3>Generate Returns</h3>
             <p>Move cacao, report impact, and circulate TDG so each pilot pays contributors, replenishes inventory, and grows transparent treasury value.</p>
           </article>
           <article class="step-card">
-            <img
-              src="https://static.wixstatic.com/media/nsplsh_50487470306344424a534d~mv2.jpg/v1/crop/x_0,y_900,w_1700,h_1700/fill/w_400,h_400,al_c,q_80,enc_avif,quality_auto/Image%20by%20Luke%20Chesser.jpg"
-              alt="Transform communities through reinvestment"
-              loading="lazy"
-            />
             <h3>Transform Communities</h3>
             <p>Recycle profits and lessons into the next experiment—fund guardians, expand Sunmint plots, and make the compassion flywheel spin faster.</p>
           </article>
@@ -205,6 +205,41 @@
     <footer>
       TrueSight DAO · Transparent impact data available at <a href="https://truesight.me">truesight.me</a>
     </footer>
+    <script>
+      // Hamburger menu toggle
+      (function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const siteHeader = document.querySelector('.site-header');
+        
+        if (!menuToggle || !navMenu) return;
+        
+        menuToggle.addEventListener('click', function() {
+          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', !isExpanded);
+          navMenu.setAttribute('aria-hidden', isExpanded);
+          siteHeader.classList.toggle('menu-open', !isExpanded);
+        });
+        
+        // Close menu when clicking on a link
+        navMenu.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A') {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            navMenu.setAttribute('aria-hidden', 'true');
+            siteHeader.classList.remove('menu-open');
+          }
+        });
+        
+        // Close menu when clicking overlay
+        siteHeader.addEventListener('click', function(e) {
+          if (e.target === siteHeader || e.target.classList.contains('site-header')) {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            navMenu.setAttribute('aria-hidden', 'true');
+            siteHeader.classList.remove('menu-open');
+          }
+        });
+      })();
+    </script>
 </body>
 </html>
 
