@@ -15,7 +15,9 @@
 /shipments/agl10 /agroverse-shipments/agl10 301
 /shipments/agl14 /agroverse-shipments/agl14 301
 
-/dao /submit-contribution 301
+/dao https://dapp.truesight.me/view_open_proposals.html 301
+/contribute https://dapp.truesight.me/view_open_proposals.html 301
+/submit-contribution https://dapp.truesight.me/view_open_proposals.html 301
 /recurring-cost https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit?gid=33812003#gid=33812003 301
 /offchain-assets https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=2083442561 301
 /digital-signatures https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit?gid=577022511#gid=577022511 301
@@ -60,7 +62,7 @@
 /submissions/raw-whatsapp-chat-logs https://drive.google.com/drive/u/0/folders/1X8fGb-kzf5WIjrsd1uO8seXnHZZkiitk 301
 /offchain-balance https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit#gid=995916231 301
 /tokenholder-wallets https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit?gid=1460794618#gid=1460794618 301
-/proposals https://app.realms.today/dao/2yH36PrWii3RthpHtdJVYaPgBzfcSLe7oevvGRavrut7 301
+/proposals https://dapp.truesight.me/view_open_proposals.html 301
 /physical-assets/serialized/sold https://docs.google.com/spreadsheets/d/1qbZZhf-_7xzmDTriaJVWj6OZshyQsFkdsAV8-pyzASQ/edit?gid=1003674539#gid=1003674539 301
 /physical-asset-movements https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit?gid=1888711771#gid=1888711771 301
 /physical-asset-locations https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit?gid=1487841772#gid=1487841772 301

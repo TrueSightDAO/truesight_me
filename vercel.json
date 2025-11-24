@@ -94,6 +94,26 @@
       "source": "/physical-assets/serialized",
       "destination": "https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit?gid=472328231#gid=472328231",
       "permanent": true
+    },
+    {
+      "source": "/proposals",
+      "destination": "https://dapp.truesight.me/view_open_proposals.html",
+      "permanent": true
+    },
+    {
+      "source": "/contribute",
+      "destination": "https://dapp.truesight.me/view_open_proposals.html",
+      "permanent": true
+    },
+    {
+      "source": "/dao",
+      "destination": "https://dapp.truesight.me/view_open_proposals.html",
+      "permanent": true
+    },
+    {
+      "source": "/submit-contribution",
+      "destination": "https://dapp.truesight.me/view_open_proposals.html",
+      "permanent": true
     }
   ]
 }

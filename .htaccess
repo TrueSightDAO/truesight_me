@@ -20,3 +20,7 @@ Redirect 301 /shipments/agl14 /agroverse-shipments/agl14
 Redirect 301 /whitepaper https://docs.google.com/document/d/1P-IJq71N0lXszUOdqdjrGwonZAfEuG1q_tJFDdKKIic/edit
 Redirect 301 /ledger https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU
 Redirect 301 /physical-assets/serialized https://docs.google.com/spreadsheets/d/1GE7PUq-UT6x2rBN-Q2ksogbWpgyuh2SaxJyG_uEK6PU/edit?gid=472328231#gid=472328231
+Redirect 301 /proposals https://dapp.truesight.me/view_open_proposals.html
+Redirect 301 /contribute https://dapp.truesight.me/view_open_proposals.html
+Redirect 301 /dao https://dapp.truesight.me/view_open_proposals.html
+Redirect 301 /submit-contribution https://dapp.truesight.me/view_open_proposals.html
